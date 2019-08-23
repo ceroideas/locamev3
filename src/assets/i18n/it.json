@@ -1,0 +1,110 @@
+{
+	"LOGIN":
+	{
+		"title": "Login",
+		"now": "SCOPRI COSA ACCADE ORA ATTORNO A TE!",
+		"email": "Posta elettronica",
+		"rememberme": "Ricordati di me",
+		"register": "Iscriviti",
+		"recover": "Hai dimenticato la password?",
+		"login": "entra",
+		"access": "o si accedi utilizzando",
+		"logout": "Chiudi sessione",
+		"recovery_title": "Recupera la tua password",
+		"send_mail": "Invia la password di ripristino",
+		"code": "Codice",
+		"check_code": "Verifica codice",
+		"password_confirmation": "Ripeti la Password",
+		"change_password": "Cambia Password"
+	},
+	"REGISTER": 
+	{
+		"title": "Registrazione",
+		"title1": "Profilo Utente",
+		"title2": "Profilo",
+		"config": "Configurazione",
+		"image": "Carica la tua foto o Avatar utente",
+		"name": "Nome utente / Soprannome",
+		"email": "Posta elettronica",
+		"send": "inviare",
+		"save": "salvare",
+		"access": "accedi utilizzando",
+		"activate": "condividi posizione",
+		"desactivate": "disattiva",
+		"seguiti": "Seguiti",
+		"update": "Aggiornare la posizione",
+		"success": "Operazione completata"
+	},
+	"DETAILS": 
+	{
+		"follow" : "FOLLOW",
+		"unfollow": "UNFOLLOW",
+		"followed": "Utenti che sto seguendo",
+		"time": "Tempo di attivazione",
+		"hr" : "Ora",
+		"hrs": "Ore",
+		"inactive": "LOCAME VIENE DISATTIVATA",
+		"active_1": "Cambiare lo stato di Locame. Possono trovarti per ",
+		"active_2": " minuti.",
+		"loading": "Caricamento",
+		"check_email": "Controlla la tua email",
+		"not_found": "Email non trovata",
+		"wait": "Aspettare",
+		"disable_geoloc": "Geolocalizzazione Disabilitata",
+		"status": "Aggiorna il tuo stato",
+		"route": "Percorso",
+		"navigation": "Avvia navigazione"
+	},
+	"SEARCH":
+	{
+		"title": "Ricerca",
+		"find": "Trova Utente",
+		"nores": "No results to show",
+		"searching": "sercando"
+	},
+	"MAP":
+	{
+		"title": "Mappa"
+	},
+	"ALERTS":
+	{
+		"user_registered": "Utente registrato, controlla la tua email per completare la registrazione",
+		"user_updated": "Utente Aggiornato",
+		"check_data": "Controlla i tuoi dati",
+		"error": "Errore dal server",
+		"wrong_data": "Dato errato",
+		"complete_fields": "Completa tutti i campi",
+		"no_internet": "Non è stata rilevata alcuna connessione Internet",
+		"user_online": "Ciao! L'utente ",
+		"online_message": "è ora in linea!"
+	},
+	"MENU":
+	{
+		"terms": "Termini di Servizio",
+		"accept": "ACCETARE",
+		"profile": "Profilo",
+		"following": "Seguiti",
+		"map": "Mappa",
+		"search": "Ricerca",
+		"configuration": "Configurazione",
+		"logout": "Chiudi sessione"
+	},
+	"HOME":
+	{
+		"activated_1":"Possono trovarti qui per ancora",
+		"how_many_time":"Per quanto tempo starai qui?",
+		"add_message":"Vuoi aggiungere un messaggio?",
+		"add_state":"Aggiorna il tuo stato",
+		"locame_now":"Vuoi condividere la posizione ora?",
+		"hour":"ora",
+		"hours":"ore",
+		"cancel":"Annullare",
+		"yes":"Si",
+		"confirm":"Confermare",
+		"exit":"Esci",
+		"state":"Stato...",
+
+		"fav":"Preferiti"
+	}
+
+}

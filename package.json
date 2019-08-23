@@ -20,12 +20,46 @@
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
+    "@ionic-native/background-mode": "^4.20.0",
+    "@ionic-native/camera": "^4.20.0",
     "@ionic-native/core": "~4.20.0",
+    "@ionic-native/deeplinks": "^4.20.0",
+    "@ionic-native/facebook": "^4.20.0",
+    "@ionic-native/file-transfer": "^4.20.0",
+    "@ionic-native/geolocation": "^4.20.0",
+    "@ionic-native/in-app-browser": "^4.20.0",
+    "@ionic-native/local-notifications": "^4.20.0",
+    "@ionic-native/network": "^4.20.0",
+    "@ionic-native/onesignal": "^4.20.0",
+    "@ionic-native/paypal": "^4.20.0",
     "@ionic-native/splash-screen": "~4.20.0",
     "@ionic-native/status-bar": "~4.20.0",
     "@ionic/storage": "2.2.0",
+    "@ngx-translate/core": "^9.1.1",
+    "@ngx-translate/http-loader": "^2.0.1",
+    "card.io.cordova.mobilesdk": "^2.1.0",
+    "com.paypal.cordova.mobilesdk": "3.5.0",
+    "cordova-android": "7.1.4",
+    "cordova-plugin-background-mode": "git+https://github.com/iowayankee/cordova-plugin-background-mode.git",
+    "cordova-plugin-badge": "^0.8.8",
+    "cordova-plugin-camera": "4.0.3",
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-facebook4": "4.2.1",
+    "cordova-plugin-file": "^6.0.1",
+    "cordova-plugin-file-transfer": "1.7.1",
+    "cordova-plugin-geolocation": "4.0.1",
+    "cordova-plugin-inappbrowser": "3.0.0",
+    "cordova-plugin-ionic-keyboard": "^2.1.3",
+    "cordova-plugin-ionic-webview": "^4.0.1",
+    "cordova-plugin-local-notification": "0.9.0-beta.2",
+    "cordova-plugin-network-information": "2.0.1",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
     "ionic-angular": "3.9.5",
+    "ionic-plugin-deeplinks": "1.0.19",
     "ionicons": "3.0.0",
+    "onesignal-cordova-plugin": "2.4.7",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.29"
@@ -34,5 +68,41 @@
     "@ionic/app-scripts": "3.2.2",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-geolocation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
+      },
+      "onesignal-cordova-plugin": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-local-notification": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-network-information": {},
+      "ionic-plugin-deeplinks": {
+        "URL_SCHEME": "locameapp",
+        "DEEPLINK_SCHEME": "https",
+        "DEEPLINK_HOST": "locame.it",
+        "ANDROID_PATH_PREFIX": "/"
+      },
+      "com.paypal.cordova.mobilesdk": {},
+      "cordova-plugin-file-transfer": {},
+      "cordova-plugin-facebook4": {
+        "APP_ID": "259952881148423",
+        "APP_NAME": "Locame App"
+      },
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-background-mode": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
 }

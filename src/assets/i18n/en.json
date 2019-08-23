@@ -1,0 +1,110 @@
+{
+	"LOGIN":
+	{
+		"title": "Login",
+		"now": "Be there now",
+		"email": "E-Mail",
+		"rememberme": "Remember me",
+		"register": "Register",
+		"recover": "Did you forget your password?",
+		"login": "LogIn",
+		"access": "Or access using",
+		"logout": "Log Out",
+		"recovery_title": "Recover your Password",
+		"send_mail": "Send Recovery Password",
+		"code": "Code",
+		"check_code": "Check code",
+		"password_confirmation": "Repeat Password",
+		"change_password": "Change Password"
+	},
+	"REGISTER": 
+	{
+		"title": "Registration",
+		"title1": "User Profile",
+		"title2": "Profile",
+		"config": "Configuration",
+		"image": "Upload your photo or User avatar",
+		"name": "Username / Nickname",
+		"email": "E-Mail",
+		"send": "send",
+		"save": "save",
+		"access": "Or access using",
+		"activate": "share position",
+		"desactivate": "deactivates",
+		"seguiti": "Followed",
+		"update": "Update position",
+		"success": "Success"
+	},
+	"DETAILS": 
+	{
+		"follow" : "FOLLOW",
+		"unfollow": "UNFOLLOW",
+		"followed": "Users I'm Following",
+		"time": "Activation time",
+		"hr" : "Hr",
+		"hrs": "Hrs",
+		"inactive": "LOCAME IT IS DEACTIVATED",
+		"active_1": "Change the status of Locame. They can find you for ",
+		"active_2": " minutes.",
+		"loading": "Loading",
+		"check_email": "Check your email",
+		"not_found": "Email not found",
+		"wait": "Wait",
+		"disable_geoloc": "Geolocation Disabled",
+		"status": "Update your status",
+		"route": "Route",
+		"navigation": "Start navigation"
+	},
+	"SEARCH":
+	{
+		"title": "Search",
+		"find": "Find Users",
+		"nores": "No results to show",
+		"searching": "Searching"
+	},
+	"MAP":
+	{
+		"title": "Map"
+	},
+	"ALERTS":
+	{
+		"user_registered": "User Registered, check your email to complete registration",
+		"user_updated": "User Updated",
+		"check_data": "Check your data",
+		"error": "Error from server",
+		"wrong_data": "Wrong Data",
+		"complete_fields": "Complete all fields",
+		"no_internet": "No Internet connection detected",
+		"user_online": "Hello! The user ",
+		"online_message": "is now ONLINE!"
+	},
+	"MENU":
+	{
+		"terms": "Terms of Service",
+		"accept": "ACCEPT",
+		"profile": "Profile",
+		"following": "Following",
+		"map": "Map",
+		"search": "Search",
+		"configuration": "Configuration",
+		"logout": "LogOut"
+	},
+	"HOME":
+	{
+		"activated_1":"They can find you here for",
+		"how_many_time":"How long will you stay here?",
+		"add_message":"Do you want to add a message?",
+		"add_state":"Update your status",
+		"locame_now":"Do you want to share the location now?",
+		"hour":"hour",
+		"hours":"hours",
+		"cancel":"Cancel",
+		"yes":"Yes",
+		"confirm":"Confirm",
+		"exit":"Exit",
+		"state":"State...",
+
+		"fav":"Favorite"
+	}
+
+}

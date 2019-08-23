@@ -1,1 +1,36 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content" side="right" type="overlay">
+  <ion-header>
+    <ion-toolbar color="primaryalt">
+      <button ion-button menuToggle>
+        <ion-icon name="close"></ion-icon>
+      </button>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div class="over-all">
+        <!-- <button menuClose class="btn-block-blue" *ngFor="let p of pages" (click)="openPage(p)">
+          <i class="fa fa-{{ p.icon }} fa-lg"></i> {{p.title}}
+        </button> -->
+        <!-- <button menuClose class="btn-block-blue" (click)="openPage('UsersPage')"><i class="fa fa-user fa-lg"></i> Profilo</button>
+        <button menuClose class="btn-block-blue" (click)="openPage('FollowedPage')"><i class="fa fa-users fa-lg"></i> Seguiti</button>
+        <button menuClose class="btn-block-blue" (click)="openPage('MapPage')"><i class="fa fa-map-marker fa-lg"></i> Mappa</button>
+        <button menuClose class="btn-block-blue" (click)="openPage('SearchPage')"><i class="fa fa-search fa-lg"></i> Ricerca</button>
+        <button menuClose class="btn-block-blue" (click)="openPage('ConfigPage')"><i class="fa fa-gear fa-lg"></i> Configurazione</button>
+        <button menuClose class="btn-block-blue" (click)="openPage('LogoutPage')"><i class="fa fa-power-off fa-lg"></i> Chiudi sessione</button> -->
+
+        <button menuClose class="btn-block-blue" (click)="openPage('UsersPage')"><i class="fa fa-user fa-lg"></i> {{ "MENU.profile" | translate }}</button>
+        <button menuClose class="btn-block-blue" (click)="pushPage('FollowedPage')"><i class="fa fa-users fa-lg"></i> {{ "MENU.following" | translate }}</button>
+        <button menuClose class="btn-block-blue" (click)="pushPage('MapPage')"><i class="fa fa-map-marker fa-lg"></i> {{ "MENU.map" | translate }}</button>
+        <!-- <button menuClose class="btn-block-blue" (click)="pushPage('SearchPage')"><i class="fa fa-search fa-lg"></i> {{ "MENU.search" | translate }}</button> -->
+        <button menuClose class="btn-block-blue" (click)="pushPage('ConfigPage')"><i class="fa fa-gear fa-lg"></i> {{ "MENU.configuration" | translate }}</button>
+        <button menuClose class="btn-block-blue" (click)="openPage('LogoutPage')"><i class="fa fa-power-off fa-lg"></i> {{ "MENU.logout" | translate }}</button>
+        <!-- <button menuClose class="btn-block-blue" (click)="testUser()"><i class="fa fa-power-off fa-lg"></i> TEST</button> -->
+    </div>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

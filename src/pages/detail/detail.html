@@ -1,0 +1,50 @@
+<!--
+  Generated template for the DetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+  	<button ion-button end menuToggle>
+	  <ion-icon name="menu"></ion-icon>
+	</button>
+    <ion-title>{{ user.name }}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button *ngIf="show_star && button == 1" (click)="addFavorite()">
+        <span>{{ 'HOME.fav' | translate }}</span> <i [ngClass]="favorite ? 'fa fa-star fa-lg' : 'fa fa-star-o fa-lg'"></i>
+      </button>
+
+      <!-- <button ion-button icon-only *ngIf="(user.stop | connected)" (click)="getPosition(user.lat,user.lon)">
+        <i class="fa fa-map-marker fa-lg"></i>
+      </button> -->
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+	<div class="bg-map">
+    <span class="state" *ngIf="user.state != null || user.state != ''"><i>{{user.state}}</i></span>
+		<div class="photo-holder" [ngStyle]="{ 'background-image': 'url(' + imagen + ')'}">
+		</div>
+    <img *ngIf="!(user.stop | connected)" src="assets/img/contenedor-imagen-perfil.png" alt="" width="200">
+		<img *ngIf="(user.stop | connected)" src="assets/img/contenedor-imagen-perfil-online.png" alt="" width="200">
+
+		<div class="container" *ngIf="(button != null && (user.geoloc != 1 && !navigation)) || true">
+			<button (click)="followUnfollow()" [disabled]="disabledButton" class="btn-enter-o" *ngIf="button == 0">{{ 'DETAILS.follow' | translate }} {{ user.name }}</button>
+			<button (click)="followUnfollow()" [disabled]="disabledButton" class="btn-enter-o" *ngIf="button == 1">{{ 'DETAILS.unfollow' | translate }} {{ user.name }}</button>
+
+		</div>
+    <div class="container" *ngIf="button != null && (user.stop | connected) && navigation">
+      <button (click)="getPosition(user.lat,user.lon)" [disabled]="disabledButton" class="btn-enter-o">{{user.address}} <br><br> <span style="text-transform: lowercase; text-transform: capitalize;">{{ 'DETAILS.route' | translate }}</span></button>
+      <br>
+      <br>
+    </div>
+	</div>
+
+</ion-content>

@@ -1,0 +1,63 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+  	<button ion-button end menuToggle>
+	  <ion-icon name="menu"></ion-icon>
+	</button>
+    <ion-title>{{"REGISTER.seguiti"|translate}}</ion-title>
+    <!-- <ion-buttons end>
+      <button ion-button icon-only (click)="menuToggle()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+<div class="bg-search">
+
+	<div class="container">
+
+		<h4 style="text-align: center; color:#ccc;">{{"DETAILS.followed" | translate}}</h4>
+
+		<ion-card *ngFor="let user of users" (click)="viewDetails(user)" [attr.data-user]="'user-'+user.id">
+		  <div class="image-container">
+		  	<div [ngClass]="(user.stop | connected) ? 'profile-image connected' : 'profile-image'" [ngStyle]="{ 'background-image': 'url(' + user.photo + ')'}">
+		  		
+		  	</div>
+		  </div>
+
+		  <ion-card-header *ngIf="user.state == '' || user.state == null">
+		    {{ user.name }} <br>
+		    <small></small>
+		    <img *ngIf="!(user.stop | connected)" src="assets/img/contenedor-imagen-perfil.png" alt="">
+		    <img *ngIf="(user.stop | connected)" src="assets/img/contenedor-imagen-perfil-online.png" alt="">
+		  </ion-card-header>
+
+		  <ion-card-header style="padding: 8px 21px;" *ngIf="user.state">
+		    {{ user.name }} <br>
+		    <small>{{ user.state }}</small>
+		    <img *ngIf="!(user.stop | connected)" src="assets/img/contenedor-imagen-perfil.png" alt="">
+		    <img *ngIf="(user.stop | connected)" src="assets/img/contenedor-imagen-perfil-online.png" alt="">
+		  </ion-card-header>
+		
+		  <!-- <ion-card-content>
+		    Add card content here!
+		  </ion-card-content> -->
+		
+		</ion-card>
+
+	</div>
+	
+</div>
+
+</ion-content>

@@ -1,0 +1,30 @@
+page-location {
+  .scroll {
+    height: 100%
+  }
+
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+  ion-buttons {
+    [ion-button] {
+      position: relative;
+      top: 3px;
+      text-transform: lowercase;
+      text-transform: capitalize;
+    }
+  }
+
+  ion-content {
+	  [ion-button] {
+	  	height: 46px;
+	  	// width: 46px;
+	  	position: fixed;
+	  	bottom: 20px;
+	  	left: 20px;
+	  	z-index: 9999;
+	  }
+  }
+
+}

@@ -1,0 +1,124 @@
+<!--
+  Generated template for the UsersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+  	<button ion-button end menuToggle>
+	  <ion-icon name="menu"></ion-icon>
+	</button>
+
+    <!-- <ion-title>{{"REGISTER.title1" | translate}}</ion-title> -->
+    <ion-title>
+	<span class="user-profile" [ngStyle]="{ 'background-image': 'url(' + imagen + ')'}"></span>
+	    <span class="user-name">{{ user['name'] }}</span>
+	</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+<div class="bg-users">
+
+	<div class="bg-map">
+
+		<h6>{{"SEARCH.find" | translate}}</h6>
+
+		<div class="input-group">
+			<input type="text" class="form-control" autofocus="true" [(ngModel)]="stringSearch.data">
+			<span class="input-group-addon" (click)="searchUsers()">
+				<i class="fa fa-search fa-lg"></i>
+			</span>
+		</div>
+
+		<!-- <div class="photo-holder" [ngStyle]="{ 'background-image': 'url(' + imagen + ')'}">
+		</div>
+		<img *ngIf="button == 0" src="assets/img/contenedor-imagen-perfil.png" alt="">
+		<img *ngIf="button == 1" src="assets/img/contenedor-imagen-perfil-online.png" alt=""> -->
+	</div>
+
+	<div class="container">
+		<!-- <h4>{{ 'REGISTER.name' | translate }}</h4>
+		
+		<h2>{{ user['name'] }}</h2>
+		
+		<ion-row *ngIf="button == 0">
+			<ion-col col-12>
+				<ion-item no-padding>
+					<ion-label style="margin-left:10px">
+						{{ "DETAILS.time" | translate }}
+					</ion-label>
+					<ion-select [(ngModel)]="time">
+						<ion-option value="10">10 sec</ion-option>
+						<ion-option value="900">15 min</ion-option>
+						<ion-option value="3600">1 {{ "DETAILS.hr" | translate }}</ion-option>
+						<ion-option value="10800">3 {{ "DETAILS.hrs" | translate }}</ion-option>
+					</ion-select>
+				</ion-item>
+			</ion-col>
+		</ion-row>
+		
+		<ion-row *ngIf="button != 0">
+			<ion-col col-9>
+				<ion-item no-padding>
+					<ion-input type="text" placeholder="{{'DETAILS.status' | translate}}" [(ngModel)]="state"></ion-input>
+					<ion-input type="text" placeholder="Aggiorna il tuo stato" [(ngModel)]="state"></ion-input>
+				</ion-item>
+			</ion-col>
+			<ion-col col-3>
+				<button no-margin style="height: 47px" ion-button full (click)="updateState()"><ion-icon name="redo"></ion-icon></button>
+			</ion-col>
+		</ion-row> -->
+
+		<h3 *ngIf="button == 1">{{ 'HOME.activated_1' | translate }} <span id="time-active">{{minutes}}</span> {{ 'DETAILS.active_2' | translate }}</h3>
+		
+		<button class="btn-enter" [disabled]="disabledButton" (click)="openAlert(1)" *ngIf="button == 0">{{ 'REGISTER.activate' | translate }}</button>
+		<button class="btn-enter-o" [disabled]="disabledButton" (click)="changeGeoloc(0)" *ngIf="button == 1">{{ 'REGISTER.desactivate' | translate }} locame</button>
+		<button style="margin-top: 0 !important;" class="btn-enter" [disabled]="disabledButton" (click)="newGeoloc()" *ngIf="button == 1">{{ 'REGISTER.update' | translate }}</button>
+
+		<div style="display: none">
+
+			<b style="display: none">Latitude: {{ user['lat'] }}</b> <br>
+			<b style="display: none">Longitude: {{ user['lon'] }}</b>
+
+		</div>
+
+	</div>
+	<div class="container-2">
+		
+		<ion-card *ngFor="let user of users" (click)="viewDetails(user)" [attr.data-user]="'user-'+user.id">
+		  <div class="image-container">
+		  	<div [ngClass]="(user.stop | connected) ? 'profile-image connected' : 'profile-image'" [ngStyle]="{ 'background-image': 'url(' + user.photo + ')'}">
+		  		
+		  	</div>
+		  </div>
+
+		  <ion-card-header *ngIf="user.state == '' || user.state == null">
+		    {{ user.name }} <br>
+		    <small></small>
+		    <img *ngIf="!(user.stop | connected)" src="assets/img/contenedor-imagen-perfil.png" alt="">
+		    <img *ngIf="(user.stop | connected)" src="assets/img/contenedor-imagen-perfil-online.png" alt="">
+		  </ion-card-header>
+
+		  <ion-card-header style="padding: 8px 21px;" *ngIf="user.state">
+		    {{ user.name }} <br>
+		    <small>{{ user.state }}</small>
+		    <img *ngIf="!(user.stop | connected)" src="assets/img/contenedor-imagen-perfil.png" alt="">
+		    <img *ngIf="(user.stop | connected)" src="assets/img/contenedor-imagen-perfil-online.png" alt="">
+		  </ion-card-header>
+		
+		  <!-- <ion-card-content>
+		    Add card content here!
+		  </ion-card-content> -->
+		
+		</ion-card>
+	</div>
+
+	
+</div>
+
+</ion-content>

@@ -1,0 +1,44 @@
+<!--
+  Generated template for the RecoveryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{ "LOGIN.recovery_title" | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+	<div class="bg-map">
+
+
+
+		<div class="container">
+			<div *ngIf="enter_email">
+			<!-- <div> -->
+				<input type="text" class="form-control" [(ngModel)]="email" placeholder="{{ 'LOGIN.email' | translate }}">
+				<button (click)="sendRecoveryEmail()" class="btn-enter-o">{{ 'LOGIN.send_mail' | translate }}</button>
+			</div>
+
+			<div *ngIf="sended_code">
+			<!-- <div> -->
+				<input type="text" class="form-control" [(ngModel)]="code" placeholder="{{ 'LOGIN.code' | translate }}">
+				<button (click)="checkCode()" class="btn-enter-o">{{ 'LOGIN.check_code' | translate }}</button>
+			</div>
+
+			<div *ngIf="change_pass">
+			<!-- <div> -->
+				<input type="password" class="form-control" [(ngModel)]="password" placeholder="Password" style="top: -20px">
+				<input type="password" class="form-control" [(ngModel)]="password_confirmation" placeholder="{{ 'LOGIN.password_confirmation' | translate }}">
+				<button (click)="changePassword()" class="btn-enter-o">{{ 'LOGIN.change_password' | translate }}</button>
+			</div>
+		</div>
+	</div>
+
+</ion-content>

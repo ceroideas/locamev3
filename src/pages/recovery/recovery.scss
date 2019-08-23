@@ -1,0 +1,115 @@
+page-recovery {
+	.bg-map {
+		background-image: url('../assets/img/map_users.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		min-height: 100vh;
+		margin-bottom: -56px;
+		position: relative;
+		z-index: 0;
+		margin-bottom: -30px;
+		overflow: hidden;
+		.photo-holder {
+			width: 150px;
+			height: 150px;
+			border-radius: 100px;
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			left: 0;
+			right: 0;
+			top: 140px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+		}
+		img {
+			top: 110px;
+			display: block;
+			margin-right: auto; 
+			margin-left: auto; 
+			left: 0;
+			right: 0;
+			position: absolute;
+		}
+	}
+	.bg-map:before {
+	    content: " ";
+	    position: absolute;
+	    width: 200%;
+	    height: 175px;
+	    background-color: #f04e53;
+	    display: block;
+	    transform: rotate(-50deg);
+	    right: -100px;
+	    top: -160px;
+	    border-bottom: 50px solid #f26558;
+	    z-index: 0;
+	}
+	.bg-map:after {
+	    content: " ";
+	    position: absolute;
+	    width: 200%;
+	    height: 175px;
+	    background-color: #f04e53;
+	    display: block;
+	    -webkit-transform: rotate(-50deg);
+	    transform: rotate(-50deg);
+	    left: -100px;
+	    bottom: -160px;
+	    border-top: 50px solid #f26558;
+	    z-index: 0;
+	}
+	.container {
+		top: 40%;
+	    width: 100%;
+	    display: block;
+	    position: absolute;
+	    margin-left: auto;
+	    margin-right: auto;
+	    height: 140px;
+	    padding: 0 40px;
+	}
+	.form-control {
+		width: 100%;
+		padding: 12px;
+		border-radius: 10px;
+		border: 1px solid;
+		position: relative;
+		z-index: 9999;
+	}
+	.btn-enter {
+		width: 100%;
+		padding: 15px;
+		position: relative;
+		background-color: #f04e53;
+		text-transform: uppercase;
+		color: #ebecff;
+		font-size: 18px;
+		z-index: 2;
+		border: none;
+		margin-top: 20px;
+		border-radius: 10px;
+	}
+	.btn-enter:active {
+		background-color: #002292;
+	}
+	.btn-enter-o {
+		width: 100%;
+		padding: 13px;
+		position: relative;
+		background-color: #ebecff;
+		text-transform: uppercase;
+		color: #f04e53;
+		font-size: 18px;
+		z-index: 2;
+		border: 2px solid #f04e53;
+		margin-top: 20px;
+		border-radius: 10px;
+	}
+	.btn-enter-o:active {
+		background-color: #ccc;
+	}
+}

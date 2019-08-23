@@ -1,0 +1,132 @@
+page-detail {
+	.bg-map {
+		background-image: url('../assets/img/map_users.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		min-height: 100vh;
+		margin-bottom: -56px;
+		position: relative;
+		z-index: 0;
+		margin-bottom: -30px;
+		overflow: hidden;
+		height: 570px;
+		.photo-holder {
+			width: 180px;
+			height: 180px;
+			border-radius: 100px;
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			left: 0;
+			right: 0;
+			top: 120px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+		}
+		img {
+			top: 110px;
+			display: block;
+			margin-right: auto; 
+			margin-left: auto; 
+			left: 0;
+			right: 0;
+			position: absolute;
+		}
+	}
+	.bg-map:before {
+	    content: " ";
+	    position: absolute;
+	    width: 200%;
+	    height: 175px;
+	    background-color: #f04e53;
+	    display: block;
+	    transform: rotate(-50deg);
+	    right: -100px;
+	    top: -160px;
+	    border-bottom: 50px solid #f26558;
+	    z-index: 0;
+	}
+	.bg-map:after {
+	    content: " ";
+	    position: absolute;
+	    width: 200%;
+	    height: 175px;
+	    background-color: #f04e53;
+	    display: block;
+	    -webkit-transform: rotate(-50deg);
+	    transform: rotate(-50deg);
+	    left: -100px;
+	    bottom: -160px;
+	    border-top: 50px solid #f26558;
+	    z-index: 0;
+	}
+	.container {
+		top: 348px;
+		width: 80%;
+		display: block;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.btn-enter {
+		width: 100%;
+		padding: 15px;
+		position: relative;
+		background-color: #f04e53;
+		text-transform: uppercase;
+		color: #ffebeb;
+		font-size: 18px;
+		z-index: 2;
+		border: none;
+		margin-top: 20px;
+		border-radius: 10px;
+	}
+	.btn-enter:active {
+		background-color: #002292;
+	}
+	.btn-enter-o {
+		width: 100%;
+		padding: 13px;
+		position: relative;
+		background-color: #ffebeb;
+		text-transform: uppercase;
+		color: #f04e53;
+		font-size: 18px;
+		z-index: 2;
+		border: 2px solid #f04e53;
+		margin-top: 20px;
+		border-radius: 10px;
+	}
+	.btn-enter-o:active {
+		background-color: #ccc;
+	}
+	.state {
+		color:#f5f5ff;
+		width: 80%;
+		display: block;
+		text-align: center;
+		position: relative;
+		margin: auto;
+		margin-top: 52px;
+		background-color: rgba(0,0,0,.3);
+	}
+	.bar-button-default-md:hover:not(.disable-hover), .bar-button-clear-md-default:hover:not(.disable-hover), .bar-button-md-default:hover:not(.disable-hover) {
+		color: #fff !important;
+	}
+	ion-buttons {
+		button {
+			text-transform: lowercase !important;
+			text-transform: capitalize !important;
+			span {
+				position: relative;
+				top: 2px;
+			}
+			i {
+				margin-left: 5px;
+			}
+		}
+	}
+}

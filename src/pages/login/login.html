@@ -1,0 +1,58 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header hidden>
+  <ion-navbar>
+    <ion-title>{{ "LOGIN.title" | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<div class="bg-login">
+
+	<div class="bg-logo" style="margin-top: 60px;">
+	<!-- <h1 class="text-center">Locame</h1> -->
+	<img style="width: 75%; display: block; margin: auto;" src="assets/img/logo-locame.png" alt="">
+
+	<h3 class="text-center" text-lowercase style="padding: 0 40px;">{{ "LOGIN.now" | translate }}</h3>
+
+	<div class="container" style="margin-top: 50px;">
+		<ion-input class="form-control" type="email" placeholder="{{ 'LOGIN.email' | translate }}" [(ngModel)]="data.email"></ion-input>
+
+		<ion-input class="form-control" type="password" placeholder="Password" [(ngModel)]="data.password"></ion-input>
+
+		<label><input type="checkbox" [(ngModel)]="remember"> {{ "LOGIN.rememberme" | translate }}</label>
+
+		<br>
+
+		<div class="options">
+
+			<a (click)="goToRegister()">{{ "LOGIN.register" | translate }}</a> <span>|</span>
+			<a (click)="goToRecovery()">{{ "LOGIN.recover" | translate }}</a>
+
+		</div>
+
+		<button class="btn-enter" [disabled]="disabledButton" (click)="loginUser()">{{ "LOGIN.login" | translate }}</button>
+
+	</div>
+
+	<div class="text-center social-links">
+		{{ "LOGIN.access" | translate }}
+
+		<div class="icons">
+
+			<div (click)="goToRegister()"><i class="fa fa-facebook fa-lg"></i> Facebook</div>
+			<!-- <div><i (click)="goToRegister()" class="fa fa-google-plus fa-lg"></i></div> -->
+			<!-- <div (click)="goToRegister()"><i class="fa fa-google-plus fa-lg"></i> Google+</div> -->
+
+		</div>
+	</div>
+
+	</div>
+</div>
+
+</ion-content>

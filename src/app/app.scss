@@ -14,3 +14,47 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.mt20 {
+	margin-top: 20px;
+}
+ion-toolbar {
+	border-bottom: 4px solid #fff;
+}
+.over-all {
+	background-color: #f04e53;
+	padding-top: 20px;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+}
+.over-all:after {
+    content: " ";
+    position: absolute;
+    width: 200%;
+    height: 145px;
+    background-color: #f04e53;
+    display: block;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    left: -80px;
+    bottom: -60px;
+    border-top: 50px solid #f26558;
+    z-index: 0;
+}
+
+.btn-block-blue {
+	text-align: left;
+	width: 100%;
+	display: block;
+	font-size: 16px;
+	color:#fff;
+	font-weight: 100;
+	padding: 15px 20px;
+	background-color: transparent;
+}
+.btn-block-blue i {
+	font-size: 32px;
+	width: 40px;
+	text-align: center;
+}

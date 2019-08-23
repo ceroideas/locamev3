@@ -1,0 +1,58 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{ "REGISTER.title" | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+<div class="bg-register">
+
+	<div class="bg-map">
+		<h6 class="text-center">{{ "REGISTER.image" | translate }}</h6>
+		<div class="photo-holder" [ngStyle]="{ 'background-image': 'url(' + imagen + ')'}">
+		</div>
+		<img src="assets/img/seleccion-imagen-perfil.png" alt="">
+		<!-- <label for="photo" id="select-image"></label> -->
+		<!-- <input type="file" id="photo" (change)="fileLoad($event)"> -->
+		<label id="select-image" (click)="getPicture()"></label>
+	</div>
+
+	<div class="container">
+		<label class="ctr-label">{{ "REGISTER.name" | translate }}</label>
+		<input class="form-control" type="text" placeholder="{{ 'REGISTER.name' | translate }}" [(ngModel)]="user.name">
+
+		<label class="ctr-label">{{ "REGISTER.email" | translate }}</label>
+		<input class="form-control" type="email" placeholder="{{ 'REGISTER.email' | translate }}" [(ngModel)]="user.email">
+
+		<label class="ctr-label">Password</label>
+		<input class="form-control" type="password" placeholder="Password" [(ngModel)]="user.password">
+
+		<button class="btn-enter" [disabled]="disabledButton" (click)="regUser()">{{ "REGISTER.send" | translate }}</button>
+
+	</div>
+
+	<div class="text-center social-links">
+		{{ "REGISTER.access" | translate }}
+
+		<div class="icons">
+
+			<div (click)="loginWithFacebook()"><i class="fa fa-facebook fa-lg"></i> Facebook</div>
+			<!-- <div><i (click)="loginWithGoogle()" class="fa fa-google-plus fa-lg"></i></div> -->
+			<!-- <div (click)="loginWithTwitter()"><i class="fa fa-google-plus fa-lg"></i> Google+</div> -->
+
+		</div>
+	</div>
+	
+</div>
+
+</ion-content>
