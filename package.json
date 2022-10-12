@@ -39,7 +39,7 @@
     "@ngx-translate/http-loader": "^2.0.1",
     "card.io.cordova.mobilesdk": "^2.1.0",
     "com.paypal.cordova.mobilesdk": "3.5.0",
-    "cordova-android": "7.1.4",
+    "cordova-android": "11.0.0",
     "cordova-plugin-background-mode": "git+https://github.com/iowayankee/cordova-plugin-background-mode.git",
     "cordova-plugin-badge": "^0.8.8",
     "cordova-plugin-camera": "4.0.3",
